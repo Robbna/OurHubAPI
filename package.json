@@ -6,7 +6,7 @@
   "scripts": {
     "init": "node ./dist/index.js",
     "dev": "ts-node-dev .",
-    "build": "tsc"
+    "build": "npm install && tsc"
   },
   "keywords": [],
   "author": "",
