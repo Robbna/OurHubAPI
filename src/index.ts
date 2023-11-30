@@ -15,13 +15,7 @@ const app = express();
 const whitelist = process.env.ALLOWED_DOMAINS!.split(" ");
 
 const corsOptions: cors.CorsOptions = {
-  origin: (origin, callback) => {
-    if (whitelist.indexOf(origin!) === -1) {
-      callback(new Error(`Not allowed by CORS`));
-      return;
-    }
-    callback(null, true);
-  },
+  origin: whitelist,
 };
 
 app.use(cors(corsOptions));
